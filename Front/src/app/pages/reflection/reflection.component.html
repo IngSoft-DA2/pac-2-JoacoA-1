@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Reflection</h2>
+
+  <button (click)="loadDlls()" [disabled]="loading">Cargar DLLs</button>
+
+  <div *ngIf="loading">Cargando...</div>
+  <div *ngIf="error">{{ error }}</div>
+  <div *ngIf="!loading && dlls.length === 0 && !error">No se encontraron DLLs.</div>
+
+  <ul *ngIf="dlls.length > 0">
+    <li *ngFor="let dll of dlls">{{ dll }}</li>
+  </ul>
+</div>

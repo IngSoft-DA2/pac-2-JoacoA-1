@@ -8,6 +8,7 @@ namespace IImporter
 {
     public interface ImporterInterface
     {
+        void Import();
         public string GetName();
     }
 }
