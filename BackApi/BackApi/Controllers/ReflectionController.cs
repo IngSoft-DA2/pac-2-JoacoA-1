@@ -15,6 +15,7 @@ namespace BackApi.Controllers
             {
                 string basePath = AppContext.BaseDirectory;
                 string reflectionPath = Path.Combine(basePath, "reflection");
+                Console.WriteLine($"Searching DLLs in: {reflectionPath}");
 
                 if (!Directory.Exists(reflectionPath))
                 {
