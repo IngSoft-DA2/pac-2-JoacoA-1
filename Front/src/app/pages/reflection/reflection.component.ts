@@ -20,7 +20,7 @@ export class ReflectionComponent {
     this.loading = true;
     this.error = null;
 
-    this.http.get<string[]>('http://localhost:7152/api/reflection/importers').subscribe({
+    this.http.get<string[]>('https://localhost:7152/api/reflection/importers').subscribe({
       next: (data) => {
         this.dlls = data;
         this.loading = false;
